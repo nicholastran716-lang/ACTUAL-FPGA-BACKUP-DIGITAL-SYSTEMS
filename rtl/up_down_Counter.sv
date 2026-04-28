@@ -1,4 +1,7 @@
-module up_down_Counter #(
+
+`timescale 1ns/ 1ps
+
+module up_down_counter #(
     parameter int MAX   = 2,
     parameter int WIDTH = 2
 ) (
@@ -7,32 +10,33 @@ module up_down_Counter #(
     input logic up,
     output logic [WIDTH - 1:0] count
 );
+  // Fix: Ensure Max is explicitly the size of WIDTH to prevent comparison issues
   localparam logic [WIDTH - 1:0] Max = WIDTH'(MAX);
   logic [WIDTH - 1 : 0] next_count;
-  initial count = 0;
-  initial count = WIDTH'(0);
 
+  // Use a single initial for clarity
+  initial count = WIDTH'(0);
 
   always_ff @(posedge clk) begin
     if (enable) count <= next_count;
   end
 
-  // Determine next state logic
   always_comb begin
     if (up) begin
-      if (count < MAX) begin
-        next_count = count + 1;
+      // Logic Check: If count is already at Max, wrap to 0
+      if (count >= Max) begin
+        next_count = WIDTH'(0);
       end else begin
-        next_count = 0;
+        next_count = count + WIDTH'(1);
       end
     end else begin
-      if (count < 0) begin
-        next_count = MAX;
+      // Logic Check: If count is at 0, wrap to Max
+      if (count == WIDTH'(0)) begin
+        next_count = Max;
       end else begin
-        next_c ount = count - 1;
+        next_count = count - WIDTH'(1);
       end
     end
 
-    //hello aijsdioajsoidjasidja
   end
 endmodule
