@@ -1,12 +1,12 @@
 {
   "extensionVersion": "1.5.2",
   "fileName": "/workspace/wave_up_down_counter.vcd",
-  "markerTime": 49948,
+  "markerTime": 22588,
   "altMarkerTime": null,
   "displayTimeUnit": "ps",
   "selectedSignal": null,
-  "zoomRatio": 0.004028654136040447,
-  "scrollLeft": 56770,
+  "zoomRatio": 0.256,
+  "scrollLeft": 45687,
   "displayedSignals": [
     {
       "dataType": "netlist-variable",

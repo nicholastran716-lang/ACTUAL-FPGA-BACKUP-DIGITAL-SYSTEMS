@@ -1,23 +1,23 @@
 {
   "extensionVersion": "1.5.2",
   "fileName": "/workspace/wave_binary_to_bcd.vcd",
-  "markerTime": 16869,
+  "markerTime": 15195,
   "altMarkerTime": null,
   "displayTimeUnit": "ps",
   "selectedSignal": null,
-  "zoomRatio": 0.010379970342941877,
+  "zoomRatio": 0.007765692098022577,
   "scrollLeft": 0,
   "displayedSignals": [
     {
       "dataType": "netlist-variable",
-      "netlistId": 0,
-      "name": "wave_binary_to_bcd.tens",
+      "netlistId": 2,
+      "name": "wave_binary_to_bcd.bin",
       "numberFormat": "hexadecimal",
       "colorIndex": 0,
       "rowHeight": 1,
       "verticalScale": 1,
       "nameType": "fullPath",
-      "customName": "tens",
+      "customName": "bin",
       "renderType": "multiBit",
       "valueLinkCommand": ""
     },
@@ -36,14 +36,14 @@
     },
     {
       "dataType": "netlist-variable",
-      "netlistId": 2,
-      "name": "wave_binary_to_bcd.bin",
-      "numberFormat": "decimal",
+      "netlistId": 0,
+      "name": "wave_binary_to_bcd.tens",
+      "numberFormat": "hexadecimal",
       "colorIndex": 0,
       "rowHeight": 1,
       "verticalScale": 1,
       "nameType": "fullPath",
-      "customName": "bin",
+      "customName": "tens",
       "renderType": "multiBit",
       "valueLinkCommand": ""
     }

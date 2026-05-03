@@ -1,8 +1,7 @@
-
 `timescale 1ns/ 1ps
 
 module up_down_counter #(
-    parameter int MAX   = 2,
+    parameter int MAX = 2,
     parameter int WIDTH = 2
 ) (
     input logic clk,
