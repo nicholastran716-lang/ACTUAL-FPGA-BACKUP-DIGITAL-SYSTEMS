@@ -43,7 +43,6 @@ module wave_mod_n_counter;
 
     // Count through another full cycle to confirm recovery
     #110;
-
     #20 $finish;
   end
 endmodule

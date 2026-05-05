@@ -17,15 +17,11 @@ module hms_counter #(
     output logic [W_MINUTES -1:0] minutes ,
     output logic [W_SECONDS -1:0] seconds
 );
-    logic [W_SECONDS - 1:0] next_second;
-    logic [W_MINUTES - 1:0] next_minute;
-    logic [W_HOURS - 1:0] next_hour;
     logic [0:0] second_rollover;
     logic [0:0] minute_rollover;
 
     localparam logic [W_SECONDS - 1: 0] Nseconds = W_SECONDS'(N_SECONDS - 1);
     localparam logic [W_MINUTES - 1: 0] Nminutes = W_MINUTES'(N_MINUTES - 1);
-    localparam logic [W_HOURS - 1: 0] Nhours = W_HOURS'(N_HOURS - 1);
 
     up_down_counter #(.MAX(N_SECONDS - 1), .WIDTH(W_SECONDS)) u_second(.clk(clk), .enable(enable), .up(1'b1), .count(seconds));
     up_down_counter #(.MAX(N_MINUTES - 1), .WIDTH(W_MINUTES)) u_minute(.clk(clk), .enable(second_rollover), .up(1'b1), .count(minutes));
